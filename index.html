@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>長野マルシェ | Produced by Zirvelon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;600&family=Zen+Kaku+Gothic+New:wght@300;500;700&display=swap');
+        body { font-family: 'Zen Kaku Gothic New', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif JP', serif; }
+        .zirvelon-logo { font-weight: 800; letter-spacing: 0.15em; }
+        
+        /* ビデオ背景 */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+        .video-background video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+        /* 高級感を出すためのグラデーションオーバーレイ */
+        .video-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(10, 10, 10, 0.55), rgba(20, 25, 20, 0.9));
+        }
+    </style>
+</head>
+<body class="text-stone-200 bg-stone-950 antialiased">
+
+    <!-- 背景動画 -->
+    <div class="video-background">
+        <video autoplay loop muted playsinline>
+            <source src="1919.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="video-overlay"></div>
+
+    <!-- 固定ヘッダー -->
+    <header class="fixed top-0 w-full bg-black/40 backdrop-blur-md z-50 border-b border-white/10 py-4 px-6 flex justify-between items-center">
+        <div class="zirvelon-logo text-xl text-emerald-400">ZIRVELON</div>
+        <nav class="space-x-6 text-sm font-medium hidden md:flex">
+            <a href="#concept" class="hover:text-emerald-400 transition text-stone-300">コンセプト</a>
+            <a href="#gallery" class="hover:text-emerald-400 transition text-stone-300">開催実績風景</a>
+            <a href="#products" class="hover:text-emerald-400 transition text-stone-300">商品ラインナップ</a>
+            <a href="#features" class="hover:text-emerald-400 transition text-stone-300">マルシェの特徴</a>
+        </nav>
+        <a href="#contact" class="bg-emerald-600 text-white px-4 py-2 rounded-full hover:bg-emerald-500 transition text-xs md:text-sm">お問い合わせ</a>
+    </header>
+
+    <!-- ヒーローセクション -->
+    <section class="h-screen flex flex-col justify-center items-center text-center p-6">
+        <span class="text-emerald-400 tracking-widest text-sm md:text-base mb-3 block" data-aos="fade-up">【催事名】長野マルシェ</span>
+        <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-wider text-white drop-shadow-xl" data-aos="fade-up" data-aos-delay="100">長野マルシェ</h1>
+        <p class="text-lg md:text-2xl font-light tracking-widest text-stone-300" data-aos="fade-up" data-aos-delay="200">長野の美味しいとワクワクを旅の思い出に</p>
+        <p class="text-xs tracking-widest text-emerald-500 mt-12 uppercase" data-aos="fade-up" data-aos-delay="300">Produced by Zirvelon</p>
+    </section>
+
+    <!-- コンセプト -->
+    <section id="concept" class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <div class="bg-black/40 backdrop-blur-md p-8 md:p-12 rounded-2xl border border-white/5 shadow-2xl" data-aos="fade-up">
+            <p class="text-base md:text-lg leading-loose text-stone-300 font-light">
+                長野県産の厳選された素材を使用した、自社製造 of 無添加スイーツや信州特産品を販売いたします。<br><br>
+                ドライバーの皆様の「ホッと一息つきたい」休憩需要と、<br class="hidden md:inline">
+                旅の「お土産」需要の双方を満たすラインナップを展開しております。
+            </p>
+        </div>
+    </section>
+
+    <!-- 現場風景ギャラリー -->
+    <section id="gallery" class="py-20 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4 text-white text-center" data-aos="fade-up">ACTUAL EVENT SCENES</h2>
+        <p class="text-sm text-center text-emerald-400 mb-12 tracking-widest" data-aos="fade-up" data-aos-delay="100">実際の開催現場の様子</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-black/40 rounded-xl overflow-hidden border border-white/10 group shadow-lg" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="1.jpg" alt="東京スカイツリー足元での信州マルシェのぼり旗" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4 bg-black/60">
+                    <p class="text-xs font-bold text-emerald-400 mb-1">東京ミズマチ開催</p>
+                    <p class="text-sm text-white font-medium">目を引く鮮やかな大型のぼり旗</p>
+                </div>
+            </div>
+
+            <div class="bg-black/40 rounded-xl overflow-hidden border border-white/10 group shadow-lg md:col-span-2" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="2.jpg" alt="催事場にできた長蛇の列" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4 bg-black/60">
+                    <p class="text-xs font-bold text-emerald-400 mb-1">圧倒的な集客実績</p>
+                    <p class="text-sm text-white font-medium">ロケーションや天候を問わず発生する長蛇の列</p>
+                </div>
+            </div>
+
+            <div class="bg-black/40 rounded-xl overflow-hidden border border-white/10 group shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <div class="h-80 overflow-hidden relative">
+                    <img src="3.jpg" alt="コンパクトで活気のある売り場" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-4 bg-black/60">
+                    <p class="text-xs font-bold text-emerald-400 mb-1">省スペース設営</p>
+                    <p class="text-sm text-white font-medium">2m×4mの範囲でも展開可能な売場</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 商業施設内実績写真 -->
+        <div class="mt-8 bg-black/40 rounded-xl overflow-hidden border border-white/10 flex flex-col md:flex-row shadow-lg" data-aos="fade-up">
+            <div class="md:w-1/2 h-64 overflow-hidden">
+                <img src="4.jpg" alt="大型商業施設内での出店風景" class="w-full h-full object-cover">
+            </div>
+            <div class="md:w-1/2 p-8 flex flex-col justify-center bg-gradient-to-r from-black/60 to-black/30">
+                <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-2">Commercial Facilities</span>
+                <h3 class="text-xl font-bold text-white mb-4">大型商業施設やインドア出店にも柔軟に対応</h3>
+                <p class="text-sm text-stone-400 leading-relaxed">
+                    屋外のテント設営だけでなく、商業施設内の催事スペースや冷凍・冷蔵を必要とする売り場構築もコンパクトに実現。施設全体のイメージを崩さず、信州ブランドの「信頼感」と「賑わい」をプラスします。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品ラインナップ -->
+    <section id="products" class="py-24 max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-16 border-b border-emerald-500/30 pb-4 text-white text-center" data-aos="fade-up">PRODUCT LINEUP</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- 自社製品 -->
+            <div class="bg-black/50 backdrop-blur-md p-8 rounded-xl border border-white/10" data-aos="fade-up">
+                <span class="text-xs text-emerald-400 font-bold tracking-widest block mb-2">ORIGINAL SWEETS</span>
+                <h3 class="text-xl font-bold mb-6 text-white border-b border-stone-800 pb-2">☆自社製品☆</h3>
+                <ul class="space-y-6 text-sm text-stone-300">
+                    <li>
+                        <h4 class="font-bold text-emerald-300">◆安曇野濃厚バスクチーズケーキ</h4>
+                        <p class="text-xs text-stone-400 mt-1">安曇野産クリームチーズを贅沢に使用した、ECサイトでもランキング１位を獲得した自慢の逸品。</p>
+                    </li>
+                    <li>
+                        <h4 class="font-bold text-emerald-300">◆超濃厚 信州プリン</h4>
+                        <p class="text-xs text-stone-400 mt-1">信州の豊かな自然で育った牛乳とたまごを贅沢に使用。</p>
+                    </li>
+                    <li>
+                        <h4 class="font-bold text-stone-400">◆その他</h4>
+                        <p class="text-xs text-stone-400 mt-1">信州りんごのアップルパイ、長野牛乳スコーン、焼き芋わらび餅パフェなど</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ワンハンド・軽食 -->
+            <div class="bg-black/50 backdrop-blur-md p-8 rounded-xl border border-white/10" data-aos="fade-up" data-aos-delay="100">
+                <span class="text-xs text-emerald-400 font-bold tracking-widest block mb-2">TAKEOUT MENU</span>
+                <h3 class="text-xl font-bold mb-6 text-white border-b border-stone-800 pb-2">☆ワンハンド・軽食☆</h3>
+                <ul class="space-y-6 text-sm text-stone-300">
+                    <li>
+                        <h4 class="font-bold text-emerald-300">◆白馬ブタ大きい肉まん</h4>
+                        <p class="text-xs text-stone-400 mt-1">白馬産の豚肉を贅沢に使い、肉汁溢れる手作りの特大肉まん。ドライブ中の軽食に最適です。</p>
+                    </li>
+                    <li>
+                        <h4 class="font-bold text-emerald-300">◆信州名物おやき・野沢菜漬物</h4>
+                        <p class="text-xs text-stone-400 mt-1">観光客に根強い人気の定番名産品。</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 旬の農産物 -->
+            <div class="bg-black/50 backdrop-blur-md p-8 rounded-xl border border-white/10" data-aos="fade-up" data-aos-delay="200">
+                <span class="text-xs text-emerald-400 font-bold tracking-widest block mb-2">SEASONAL FARM</span>
+                <h3 class="text-xl font-bold mb-6 text-white border-b border-stone-800 pb-2">☆信州産 旬の農産物☆</h3>
+                <ul class="space-y-6 text-sm text-stone-300">
+                    <li>
+                        <h4 class="font-bold text-emerald-300">◆新鮮な旬の果実（季節限定）</h4>
+                        <p class="text-xs text-stone-400 mt-1">提携農家から直接仕入れた（または自社収穫した）信州りんご、梨などの新鮮な果実をお届けします。</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特徴セクション -->
+    <section id="features" class="py-24 bg-stone-900/40 backdrop-blur-sm border-t border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-16 border-b border-emerald-500/30 pb-4 text-white text-center" data-aos="fade-up">MARCHE FEATURES</h2>
+            
+            <div class="space-y-12">
+                <!-- 特徴1 -->
+                <div class="bg-black/40 p-8 rounded-xl border border-white/5 flex flex-col md:flex-row gap-6" data-aos="fade-up">
+                    <div class="text-3xl font-bold text-emerald-400 md:w-12">①</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-3">高い集客実績と「賑わい」の創出</h3>
+                        <p class="text-sm text-stone-400 leading-relaxed">
+                            関東圏（東京ミズマチ、大宮など）や大型商業施設において多数 of 開催実績があり、悪天候や人通りの少ない立地であっても長蛇の列を作る高い集客力を誇ります。（最高で１日に６００組の来場実績あり）。コンパクト（２ｍ×４ｍ程度～）で活気のある売り場を構築し、エリア全体の賑わい創出に貢献します。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 特徴2 -->
+                <div class="bg-black/40 p-8 rounded-xl border border-white/5 flex flex-col md:flex-row gap-6" data-aos="fade-up">
+                    <div class="text-3xl font-bold text-emerald-400 md:w-12">②</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-3">フードロス削減への取り組みとＳＤGsへの貢献</h3>
+                        <p class="text-sm text-stone-400 leading-relaxed">
+                            弊社では、農家さんが売り先に困り廃棄していた「訳アリ品（規格外品）」の果物や野菜も積極的に仕入れ、自社スイーツの原料として加工・活用しています。美味しさはそのままに食品ロス削減を目指すこの取り組みは、サスティナブルな社会への貢献として、お客様からも非常に高い共感と支持をいただいております。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 特徴3 -->
+                <div class="bg-black/40 p-8 rounded-xl border border-white/5 flex flex-col md:flex-row gap-6" data-aos="fade-up">
+                    <div class="text-3xl font-bold text-emerald-400 md:w-12">③</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-3">「信州」ブランドの信頼性とこだわり品質</h3>
+                        <p class="text-sm text-stone-400 leading-relaxed">
+                            「できるだけ余計なものは入れない」をモットーに、日々レシピの改良を重ねて自社製造をおこなっております。信州の牛乳、たまご、果実といった確かな素材の味をダイレクトに味わえる無添加スイーツは、健康志向のファミリー層からシニア層まで安心しておすすめできる品質です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 特徴4 -->
+                <div class="bg-black/40 p-8 rounded-xl border border-white/5 flex flex-col md:flex-row gap-6" data-aos="fade-up">
+                    <div class="text-3xl font-bold text-emerald-400 md:w-12">④</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-white mb-3">自社広告・ＳＮＳによる能動的な誘客力</h3>
+                        <p class="text-sm text-stone-400 leading-relaxed">
+                            ただ出店して待つだけではなく、自社での新聞折り込みチラシやポスティング、WＥＢ媒体を通じた周辺地域への告知を積極的に行っています。遠方からのドライブ客だけでなく、周辺地域の住民の皆様が「信州マルシェ」を目的に足を運ぶような、能動的な誘客をお約束します。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer id="contact" class="py-20 bg-black/80 border-t border-white/10 text-center">
+        <p class="mb-2 text-xs tracking-widest text-stone-500 uppercase">Next Stage Partner</p>
+        <p class="mb-8 font-bold text-xl text-white tracking-wider">Zirvelon</p>
+        <a href="mailto:contact@zirvelon.com" class="inline-block bg-emerald-600 text-white px-10 py-4 rounded-full hover:bg-emerald-500 transition duration-300 font-medium tracking-wide shadow-lg shadow-emerald-900/50">
+            出店に関するお問い合わせ・交渉はこちら
+        </a>
+        <p class="mt-12 text-xs text-stone-600">&copy; 2026 Zirvelon. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
